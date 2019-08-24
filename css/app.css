@@ -1,0 +1,198 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+}
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  --body__font: "Roboto";
+  --header__font: "Roboto";
+  --body__color: #1B1B1B;
+  --h1__color: #1B1B1B;
+  --h2__color: #363636;
+  --h3__color: #363636;
+  --button__color: white;
+  --button__background_color: #1B1B1B;
+  --button__hover_color: white;
+  --button__hover_background_color: #505050;
+  --list__border_color: #a8a8a8;
+  --list__hover_color: white;
+  --list__hover_background_color: #1B1B1B;
+  --square__size: 32.89vw;
+  --square__color: white;
+  --square__background_color: #1B1B1B;
+  --square__background_opacity: 0.1;
+  --square__hover_background_opacity: 0.4;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.section {
+  padding: 20px 40px;
+}
+.section.no_padding {
+  padding: 0;
+}
+.section.no_padding > .padded {
+  padding: 20px 40px;
+}
+.section.left_border {
+  border-left: 0.5px solid var(--list__border_color);
+}
+.section.fullscreen {
+  height: 100vh;
+}
+.section.reverse {
+  --h1__color: white;
+  --h2__color: white;
+  --h3__color: white;
+  --body__color: white;
+  --button__color: #1B1B1B;
+  --button__background_color: white;
+  --list__border_color: #a8a8a8;
+  --list__hover_color: #1B1B1B;
+  --list__hover_background_color: white;
+  background-color: black;
+}
+.split {
+  display: flex;
+}
+.split > * {
+  display: inline-block;
+}
+.list > * {
+  padding: 5px 20px;
+  border-bottom: 0.5px solid var(--list__border_color);
+  cursor: pointer;
+}
+.list > *:last-child:not(:first-child) {
+  border-bottom: none;
+}
+.list.interactive > * {
+  transition: 0.2s all;
+}
+.list.interactive > *:hover {
+  color: var(--list__hover_color);
+  background-color: var(--list__hover_background_color);
+  --h1__color: var(--list__hover_color);
+  --h2__color: var(--list__hover_color);
+  --h3__color: var(--list__hover_color);
+  --body__color: var(--list__hover_color);
+}
+.squares {
+  display: flex;
+  flex-wrap: wrap;
+}
+.squares > * {
+  position: relative;
+  width: var(--square__size);
+  height: var(--square__size);
+  color: var(--square__color);
+  background-color: var(--square__background_color);
+  cursor: pointer;
+  overflow: hidden;
+}
+.squares > *.grow {
+  flex-grow: 1;
+}
+.squares > * > .body {
+  position: absolute;
+  padding: 20px 40px;
+  z-index: 2;
+}
+.squares > * > .background {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  opacity: var(--square__background_opacity);
+  z-index: 1;
+  transition: 0.2s all;
+}
+.squares > *:hover > .background {
+  opacity: var(--square__hover_background_opacity);
+}
+@media only screen and (max-width: 1100px) {
+  .squares {
+    --square__size: 30vw;
+  }
+  .squares > * {
+    flex-grow: 1;
+  }
+}
+a,
+p,
+li,
+span {
+  color: var(--body__color);
+  font-size: 13pt;
+  font-family: var(--body__font);
+}
+a.sub,
+p.sub,
+li.sub,
+span.sub {
+  opacity: 0.7;
+}
+a.large,
+p.large,
+li.large,
+span.large,
+a.call_to_action,
+p.call_to_action,
+li.call_to_action,
+span.call_to_action {
+  font-size: 16pt;
+}
+h1 {
+  color: var(--h1__color);
+  font-size: 42pt;
+  font-family: var(--header__font);
+  font-weight: 700;
+}
+h2 {
+  color: var(--h2__color);
+  font-size: 28pt;
+  font-family: var(--header__font);
+  font-weight: 500;
+}
+h3 {
+  color: var(--h3__color);
+  font-size: 18pt;
+  font-family: var(--header__font);
+  font-weight: 500;
+}
+button {
+  border: none;
+  border-radius: 3px;
+  padding: 12px 17px;
+  color: var(--button__color);
+  font-size: 13pt;
+  font-weight: 700;
+  background-color: var(--button__background_color);
+  cursor: pointer;
+  transition: 0.2s all;
+}
+button:hover {
+  color: var(--button__hover_color);
+  background-color: var(--button__hover_background_color);
+}

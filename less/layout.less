@@ -1,0 +1,185 @@
+.section {
+
+	padding: 20px 40px;
+
+	&.no_padding {
+
+		padding: 0;
+
+		&>.padded {
+
+			padding: 20px 40px;
+
+		}
+
+	}
+
+	&.left_border {
+
+		border-left: @border_width solid var(--list__border_color);
+
+	}
+
+	&.fullscreen {
+
+		height: 100vh;
+
+	}
+	
+	&.reverse {
+
+		--h1__color: @white;
+		--h2__color: @white;
+		--h3__color: @white;
+		--body__color: @white;
+
+		// Components
+
+		--button__color: @black;
+		--button__background_color: @white;
+
+		// Layout
+
+		--list__border_color: mix(@gray, @white);
+
+		--list__hover_color: @black;
+		--list__hover_background_color: @white;
+
+		background-color: black;
+
+	}
+
+}
+
+.split {
+
+	display: flex;
+
+	&>* {
+
+		display: inline-block;
+
+	}
+
+}
+
+.list {
+
+	// padding: 20px 40px;
+
+	&>* {
+
+		padding: 5px 20px;
+
+		border-bottom: @border_width solid var(--list__border_color);
+
+		&:last-child:not(:first-child) {
+
+			border-bottom: none;
+
+		}
+
+		cursor: pointer;
+
+	}
+
+	&.interactive {
+
+		&>* {
+
+			&:hover {
+
+				color: var(--list__hover_color);
+				background-color: var(--list__hover_background_color);
+
+				--h1__color: var(--list__hover_color);
+				--h2__color: var(--list__hover_color);
+				--h3__color: var(--list__hover_color);
+				--body__color: var(--list__hover_color);
+
+			}
+			
+			transition: 0.2s all;
+
+		}
+
+	}
+
+}
+
+.squares {
+
+	display: flex;
+	
+	flex-wrap: wrap;
+
+	&>* {
+
+		position: relative;
+
+		width: var(--square__size);
+		height: var(--square__size);
+
+		color: var(--square__color);
+
+		background-color: var(--square__background_color);
+
+		&.grow {
+
+			flex-grow: 1;
+
+		}
+
+		&>.body {
+
+			position: absolute;
+
+			padding: 20px 40px;
+
+			z-index: 2;
+
+		}
+
+		&>.background {
+
+			position: absolute;
+
+			width: 100%;
+			height: auto;
+
+			opacity: var(--square__background_opacity);
+
+			z-index: 1;
+
+			.transition();
+
+		}
+
+		&:hover {
+
+			&>.background {
+
+				opacity: var(--square__hover_background_opacity);
+
+			}
+
+		}
+
+		cursor: pointer;
+		overflow: hidden;
+
+	}
+
+	@media only screen and (max-width: @squares_scaling_trigger_width) {
+			
+		--square__size: 30vw;
+
+		&>* {
+
+			flex-grow: 1;
+
+		}
+
+	}
+
+}

@@ -1,0 +1,82 @@
+// Default Values
+
+@import "https://fonts.googleapis.com/css?family=Roboto:400,500,700";
+
+// Primary Colors
+
+@red: rgb(231, 40, 40);
+// @blue: rgb(0, 0, 255);
+@orange: rgb(255, 115, 0);
+@black: #1B1B1B;
+@white: white;
+
+// Secondary Colors
+
+@gray: #505050;
+
+// Other Constants
+
+@radius: 3px;
+@tablet_width: 750px;
+@border_width: 0.5px;
+@squares_scaling_trigger_width: 1100px;
+
+.transition () {transition: 0.2s all;}
+
+* {
+
+	outline: none;
+	box-sizing: border-box;
+
+}
+
+html {
+
+	// Fonts
+
+	--body__font: "Roboto";
+	--header__font: "Roboto";
+
+	// Color
+
+	--body__color: @black;
+	--h1__color: @black;
+	--h2__color: mix(@black, @gray);
+	--h3__color: mix(@black, @gray);
+
+	// Components
+
+	--button__color: @white;
+	--button__background_color: @black;
+
+	--button__hover_color: @white;
+	--button__hover_background_color: @gray;
+
+	// Layout
+
+	--list__border_color: mix(@gray, @white);
+
+	--list__hover_color: @white;
+	--list__hover_background_color: @black;
+
+	--square__size: 32.89vw;
+	--square__color: @white;
+	--square__background_color: @black;
+
+	--square__background_opacity: 0.1;
+	--square__hover_background_opacity: 0.4;
+
+}
+
+html, body {
+
+	margin: 0;
+	padding: 0;
+
+	width: 100%;
+	height: 100%;
+
+}
+
+@import "layout.less";
+@import "components.less";
