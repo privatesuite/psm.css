@@ -4,9 +4,8 @@
 
 // Primary Colors
 
-@red: rgb(231, 40, 40);
-// @blue: rgb(0, 0, 255);
-@orange: rgb(255, 115, 0);
+@red: #ff6d6d;
+@blue: #1e00ff;
 @black: #1B1B1B;
 @white: white;
 
@@ -27,6 +26,13 @@
 
 	outline: none;
 	box-sizing: border-box;
+
+	&::selection {
+
+		color: @black;
+		background-color: @red;
+
+	}
 
 }
 
@@ -56,6 +62,8 @@ html {
 
 	--input__color: @black;
 
+	--strong__color: @red;
+
 	// Layout
 
 	--list__border_color: mix(@gray, @white);
@@ -65,9 +73,10 @@ html {
 
 	--square__size: 32.89vw;
 	--square__color: @white;
-	--square__background_color: @black;
-
+	--square__background_color: @red;
 	--square__background_opacity: 0.1;
+	
+	--square__hover_background_color: lighten(@red, 10%);
 	--square__hover_background_opacity: 0.4;
 
 }

@@ -20,6 +20,10 @@
   outline: none;
   box-sizing: border-box;
 }
+*::selection {
+  color: #1B1B1B;
+  background-color: #ff6d6d;
+}
 html {
   --body__font: "Roboto";
   --header__font: "Roboto";
@@ -33,13 +37,15 @@ html {
   --button__hover_background_color: #505050;
   --input__border_color: #a8a8a8;
   --input__color: #1B1B1B;
+  --strong__color: #ff6d6d;
   --list__border_color: #a8a8a8;
   --list__hover_color: white;
   --list__hover_background_color: #1B1B1B;
   --square__size: 32.89vw;
   --square__color: white;
-  --square__background_color: #1B1B1B;
+  --square__background_color: #ff6d6d;
   --square__background_opacity: 0.1;
+  --square__hover_background_color: #ffa0a0;
   --square__hover_background_opacity: 0.4;
 }
 html,
@@ -90,6 +96,7 @@ body {
   vertical-align: middle;
 }
 .list > * {
+  display: block;
   padding: 5px 20px;
   border-bottom: 0.5px solid var(--list__border_color);
   cursor: pointer;
@@ -114,12 +121,15 @@ body {
 }
 .squares > * {
   position: relative;
+  display: inline-block;
   width: var(--square__size);
   height: var(--square__size);
   color: var(--square__color);
+  text-decoration: none;
   background-color: var(--square__background_color);
   cursor: pointer;
   overflow: hidden;
+  transition: 0.2s all;
 }
 .squares > *.grow {
   flex-grow: 1;
@@ -136,6 +146,9 @@ body {
   opacity: var(--square__background_opacity);
   z-index: 1;
   transition: 0.2s all;
+}
+.squares > *:hover {
+  background-color: var(--square__hover_background_color);
 }
 .squares > *:hover > .background {
   opacity: var(--square__hover_background_opacity);
@@ -217,5 +230,9 @@ input[type="search"] {
   color: var(--input__color);
   font-size: 11pt;
   font-family: var(--body__font);
+  font-weight: 700;
+}
+strong {
+  color: var(--strong__color);
   font-weight: 700;
 }

@@ -87,6 +87,8 @@
 
 	&>* {
 
+		display: block;
+
 		padding: 5px 20px;
 
 		border-bottom: @border_width solid var(--list__border_color);
@@ -135,10 +137,13 @@
 
 		position: relative;
 
+		display: inline-block;
+
 		width: var(--square__size);
 		height: var(--square__size);
 
 		color: var(--square__color);
+		text-decoration: none;
 
 		background-color: var(--square__background_color);
 
@@ -175,6 +180,8 @@
 
 		&:hover {
 
+			background-color: var(--square__hover_background_color);
+
 			&>.background {
 
 				opacity: var(--square__hover_background_opacity);
@@ -185,6 +192,7 @@
 
 		cursor: pointer;
 		overflow: hidden;
+		.transition();
 
 	}
 
