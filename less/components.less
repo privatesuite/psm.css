@@ -52,15 +52,15 @@ h3 {
 	
 }
 
-button {
+button, input[type="submit"] {
 
 	border: none;
 	border-radius: @radius;
 
-	padding: 12px 17px;
+	padding: 13px 18px;
 
 	color: var(--button__color);
-	font-size: 13pt;
+	font-size: 11pt;
 	font-weight: 700;
 
 	background-color: var(--button__background_color);
@@ -74,5 +74,19 @@ button {
 
 	cursor: pointer;
 	.transition();
+
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="search"] {
+
+	border: @border_width solid var(--input__border_color);
+	border-radius: @radius;
+
+	padding: 12px 17px;
+	
+	color: var(--input__color);
+	font-size: 11pt;
+	font-family: var(--body__font);
+	font-weight: 700;
 
 }

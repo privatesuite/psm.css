@@ -31,6 +31,8 @@ html {
   --button__background_color: #1B1B1B;
   --button__hover_color: white;
   --button__hover_background_color: #505050;
+  --input__border_color: #a8a8a8;
+  --input__color: #1B1B1B;
   --list__border_color: #a8a8a8;
   --list__hover_color: white;
   --list__hover_background_color: #1B1B1B;
@@ -79,6 +81,13 @@ body {
 }
 .split > * {
   display: inline-block;
+}
+.form > .line {
+  display: block;
+  margin-bottom: 5px;
+}
+.form > .line > * {
+  vertical-align: middle;
 }
 .list > * {
   padding: 5px 20px;
@@ -181,18 +190,32 @@ h3 {
   font-family: var(--header__font);
   font-weight: 500;
 }
-button {
+button,
+input[type="submit"] {
   border: none;
   border-radius: 3px;
-  padding: 12px 17px;
+  padding: 13px 18px;
   color: var(--button__color);
-  font-size: 13pt;
+  font-size: 11pt;
   font-weight: 700;
   background-color: var(--button__background_color);
   cursor: pointer;
   transition: 0.2s all;
 }
-button:hover {
+button:hover,
+input[type="submit"]:hover {
   color: var(--button__hover_color);
   background-color: var(--button__hover_background_color);
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"] {
+  border: 0.5px solid var(--input__border_color);
+  border-radius: 3px;
+  padding: 12px 17px;
+  color: var(--input__color);
+  font-size: 11pt;
+  font-family: var(--body__font);
+  font-weight: 700;
 }
