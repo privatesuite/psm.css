@@ -16,6 +16,9 @@
   font-weight: 700;
   src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
 }
+::-webkit-scrollbar {
+  width: 0px;
+}
 * {
   outline: none;
   box-sizing: border-box;
@@ -107,7 +110,8 @@ body {
 .list.interactive > * {
   transition: 0.2s all;
 }
-.list.interactive > *:hover {
+.list.interactive > *:hover,
+.list.interactive > *.hover {
   color: var(--list__hover_color);
   background-color: var(--list__hover_background_color);
   --h1__color: var(--list__hover_color);
