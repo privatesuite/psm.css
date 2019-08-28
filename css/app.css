@@ -34,6 +34,7 @@ html {
   --h1__color: #1B1B1B;
   --h2__color: #363636;
   --h3__color: #363636;
+  --h4__color: #363636;
   --button__color: white;
   --button__background_color: #1B1B1B;
   --button__hover_color: white;
@@ -206,6 +207,12 @@ h3 {
   font-size: 18pt;
   font-family: var(--header__font);
   font-weight: 500;
+}
+h4 {
+  color: var(--h3__color);
+  font-size: 14pt;
+  font-family: var(--header__font);
+  font-weight: 400;
 }
 button,
 input[type="submit"] {
