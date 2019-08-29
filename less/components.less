@@ -107,3 +107,75 @@ strong {
 	font-weight: 700;
 
 }
+
+.tag {
+
+	border-radius: @radius;
+
+	padding: 5px 17px;
+
+	font-weight: 900;
+	text-decoration: none;
+
+	&.white {
+
+		border: @border_width solid @black;
+
+		padding: 4.5px 16.5px;
+
+		background-color: @white;
+
+		&:hover {
+
+			color: @white;
+
+			background-color: @black;
+
+		}
+
+	}
+
+	&.black {
+
+		color: @white;
+
+		background-color: @black;
+
+		&:hover {
+
+			background-color: @gray;
+
+		}
+
+	}
+
+	&.red {
+
+		background-color: @red;
+
+		&:hover {
+
+			background-color: darken(@red, 10%);
+
+		}
+
+	}
+
+	&.blue {
+	
+		color: @white;
+
+		background-color: @blue;
+
+		&:hover {
+
+			background-color: darken(@blue, 10%);
+
+		}
+
+	}
+
+	cursor: pointer;
+	.transition();
+
+}
