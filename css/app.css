@@ -171,7 +171,10 @@ body {
 a,
 p,
 li,
-span {
+span,
+strong,
+u,
+i {
   color: var(--body__color);
   font-size: 13pt;
   font-family: var(--body__font);
@@ -179,17 +182,26 @@ span {
 a.sub,
 p.sub,
 li.sub,
-span.sub {
+span.sub,
+strong.sub,
+u.sub,
+i.sub {
   opacity: 0.7;
 }
 a.large,
 p.large,
 li.large,
 span.large,
+strong.large,
+u.large,
+i.large,
 a.call_to_action,
 p.call_to_action,
 li.call_to_action,
-span.call_to_action {
+span.call_to_action,
+strong.call_to_action,
+u.call_to_action,
+i.call_to_action {
   font-size: 16pt;
 }
 h1 {
