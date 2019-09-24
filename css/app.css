@@ -242,6 +242,7 @@ input[type="submit"] {
   color: var(--button__color);
   font-size: 11pt;
   font-weight: 700;
+  --body__color: var(--button-color);
   background-color: var(--button__background_color);
   cursor: pointer;
   transition: 0.2s all;
@@ -250,6 +251,10 @@ button:hover,
 input[type="submit"]:hover {
   color: var(--button__hover_color);
   background-color: var(--button__hover_background_color);
+}
+button *,
+input[type="submit"] * {
+  font-size: 11pt;
 }
 .panel,
 textarea,
