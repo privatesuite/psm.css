@@ -44,7 +44,6 @@ h2 {
 
 h3 {
 
-	
 	color: var(--h3__color);
 	font-size: 18pt;
 	font-family: var(--header__font);
@@ -54,12 +53,21 @@ h3 {
 
 h4 {
 
-	
 	color: var(--h3__color);
 	font-size: 15pt;
 	font-family: var(--header__font);
 	font-weight: 400;
 	
+}
+
+h1, h2, h3, h4 {
+
+	&.no_margin {
+
+		margin: 0;
+
+	}
+
 }
 
 button, input[type="submit"] {
@@ -87,7 +95,7 @@ button, input[type="submit"] {
 
 }
 
-input[type="text"], input[type="password"], input[type="email"], input[type="search"] {
+textarea, input[type="text"], input[type="password"], input[type="email"], input[type="search"], .input, .textarea {
 
 	border: @border_width solid var(--input__border_color);
 	border-radius: @radius;
@@ -99,16 +107,19 @@ input[type="text"], input[type="password"], input[type="email"], input[type="sea
 	font-family: var(--body__font);
 	font-weight: 700;
 
-}
+	&::placeholder {
 
-strong {
+		color: @gray;
 
-	color: var(--strong__color);
-	font-weight: 700;
+		opacity: 0.75;
+
+	}
 
 }
 
 .tag {
+
+	display: inline-block;
 
 	border-radius: @radius;
 
@@ -123,6 +134,7 @@ strong {
 
 		padding: 4.5px 16.5px;
 
+		color: @black;
 		background-color: @white;
 
 		&:hover {
@@ -172,6 +184,52 @@ strong {
 			background-color: darken(@blue, 10%);
 
 		}
+
+	}
+
+	cursor: pointer;
+	.transition();
+
+}
+
+blockquote {
+
+	position: relative;
+
+	margin-left: 0;
+
+	border-left: 5px solid @red;
+	border-radius: 5px;
+
+	padding: 20px 40px;
+
+	color: var(--body__color);
+	font-family: var(--body__font);
+
+	&:before {
+
+		position: absolute;
+
+		top: 5px;
+		left: 15px;
+
+		font-size: 50px;
+
+		content: "“";
+
+	}
+
+}
+
+img {
+
+	border-radius: @radius;
+
+	&:hover {
+
+		border-radius: @radius * 3;
+
+		filter: brightness(80%);
 
 	}
 

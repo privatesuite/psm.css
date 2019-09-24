@@ -22,6 +22,8 @@
 * {
   outline: none;
   box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
 }
 *::selection {
   color: #1B1B1B;
@@ -214,6 +216,12 @@ h4 {
   font-family: var(--header__font);
   font-weight: 400;
 }
+h1.no_margin,
+h2.no_margin,
+h3.no_margin,
+h4.no_margin {
+  margin: 0;
+}
 button,
 input[type="submit"] {
   border: none;
@@ -231,10 +239,13 @@ input[type="submit"]:hover {
   color: var(--button__hover_color);
   background-color: var(--button__hover_background_color);
 }
+textarea,
 input[type="text"],
 input[type="password"],
 input[type="email"],
-input[type="search"] {
+input[type="search"],
+.input,
+.textarea {
   border: 0.5px solid var(--input__border_color);
   border-radius: 3px;
   padding: 12px 17px;
@@ -243,11 +254,18 @@ input[type="search"] {
   font-family: var(--body__font);
   font-weight: 700;
 }
-strong {
-  color: var(--strong__color);
-  font-weight: 700;
+textarea::placeholder,
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder,
+input[type="search"]::placeholder,
+.input::placeholder,
+.textarea::placeholder {
+  color: #505050;
+  opacity: 0.75;
 }
 .tag {
+  display: inline-block;
   border-radius: 3px;
   padding: 5px 17px;
   font-weight: 900;
@@ -258,6 +276,7 @@ strong {
 .tag.white {
   border: 0.5px solid #1B1B1B;
   padding: 4.5px 16.5px;
+  color: #1B1B1B;
   background-color: white;
 }
 .tag.white:hover {
@@ -283,4 +302,29 @@ strong {
 }
 .tag.blue:hover {
   background-color: #1800cc;
+}
+blockquote {
+  position: relative;
+  margin-left: 0;
+  border-left: 5px solid #ff6d6d;
+  border-radius: 5px;
+  padding: 20px 40px;
+  color: var(--body__color);
+  font-family: var(--body__font);
+}
+blockquote:before {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  font-size: 50px;
+  content: "“";
+}
+img {
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+img:hover {
+  border-radius: 9px;
+  filter: brightness(80%);
 }
