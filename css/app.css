@@ -171,12 +171,18 @@ body {
 a,
 p,
 li,
+span {
+  font-size: 13pt;
+}
+a,
+p,
+li,
 span,
 strong,
 u,
-i {
+i,
+b {
   color: var(--body__color);
-  font-size: 13pt;
   font-family: var(--body__font);
 }
 a.sub,
@@ -185,7 +191,8 @@ li.sub,
 span.sub,
 strong.sub,
 u.sub,
-i.sub {
+i.sub,
+b.sub {
   opacity: 0.7;
 }
 a.large,
@@ -195,13 +202,15 @@ span.large,
 strong.large,
 u.large,
 i.large,
+b.large,
 a.call_to_action,
 p.call_to_action,
 li.call_to_action,
 span.call_to_action,
 strong.call_to_action,
 u.call_to_action,
-i.call_to_action {
+i.call_to_action,
+b.call_to_action {
   font-size: 16pt;
 }
 h1 {
