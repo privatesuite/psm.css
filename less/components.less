@@ -243,3 +243,56 @@ img {
 	.transition();
 
 }
+
+.notifications {
+
+	position: fixed;
+
+	right: 25px;
+	bottom: 25px;
+
+	min-width: 200px;
+	max-width: 30%;
+
+	&>* {
+
+		margin: 0;
+		margin-top: 10px;
+
+		border-radius: @radius;
+
+		padding: 13px 18px;
+
+		width: 100%;
+		
+		color: var(--body__color);
+		font-size: 13pt;
+		// font-weight: 500;
+		font-family: var(--body__font);
+
+		background-color: @black;
+
+		cursor: pointer;
+		opacity: 0.6;
+		.transition();
+		
+		&:hover {
+
+			opacity: 1;
+
+		}
+
+		&.fading {
+
+			width: 0px;
+			height: 0px;
+
+			opacity: 0;
+
+		}
+
+	}
+
+	--body__color: @white;
+
+}

@@ -356,3 +356,33 @@ img:hover {
   border-radius: 9px;
   filter: brightness(80%);
 }
+.notifications {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  min-width: 200px;
+  max-width: 30%;
+  --body__color: white;
+}
+.notifications > * {
+  margin: 0;
+  margin-top: 10px;
+  border-radius: 3px;
+  padding: 13px 18px;
+  width: 100%;
+  color: var(--body__color);
+  font-size: 13pt;
+  font-family: var(--body__font);
+  background-color: #1B1B1B;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.2s all;
+}
+.notifications > *:hover {
+  opacity: 1;
+}
+.notifications > *.fading {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
