@@ -243,6 +243,8 @@ h3.no_margin,
 h4.no_margin {
   margin: 0;
 }
+.btn,
+.button,
 button,
 input[type="submit"] {
   border: none;
@@ -256,11 +258,15 @@ input[type="submit"] {
   cursor: pointer;
   transition: 0.2s all;
 }
+.btn:hover,
+.button:hover,
 button:hover,
 input[type="submit"]:hover {
   color: var(--button__hover_color);
   background-color: var(--button__hover_background_color);
 }
+.btn *,
+.button *,
 button *,
 input[type="submit"] * {
   font-size: 11pt;
