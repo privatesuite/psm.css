@@ -278,7 +278,8 @@ input[type="password"],
 input[type="email"],
 input[type="search"],
 .input,
-.textarea {
+.textarea,
+select {
   border: 0.5px solid var(--input__border_color);
   border-radius: 3px;
   padding: 12px 17px;
@@ -294,9 +295,13 @@ input[type="password"]::placeholder,
 input[type="email"]::placeholder,
 input[type="search"]::placeholder,
 .input::placeholder,
-.textarea::placeholder {
+.textarea::placeholder,
+select::placeholder {
   color: #505050;
   opacity: 0.75;
+}
+select {
+  text-decoration: underline;
 }
 .tag {
   display: inline-block;
